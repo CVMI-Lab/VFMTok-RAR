@@ -173,7 +173,7 @@ The majority of this project is licensed under Apacha 2.0 License. Portions of t
 
 ## Acknowledgement
 
-Our codebase builds upon several excellent open-source projects, including [LlamaGen](https://github.com/FoundationVision/LlamaGen), [Deformable DETR](https://github.com/fundamentalvision/Deformable-DETR), [Hita](https://github.com/CVMI-Lab/Hita) and [Paintmind](https://github.com/Qiyuan-Ge/PaintMind). We are grateful to the communities behind them.
+Our codebase builds upon several excellent open-source projects, including [LlamaGen](https://github.com/FoundationVision/LlamaGen), [Deformable DETR](https://github.com/fundamentalvision/Deformable-DETR), [VFMTok](https://github.com/CVMI-Lab/VFMTok) and [RAR](https://github.com/bytedance/1d-tokenizer), [AliTok](https://github.com/ali-vilab/alitok). We are grateful to the communities behind them.
 
 ## Contact
 This codebase has been cleaned up but has not undergone extensive testing. If you encounter any issues or have questions, please open a GitHub issue. We appreciate your feedback!
