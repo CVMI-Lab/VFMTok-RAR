@@ -10,8 +10,6 @@
 <img src="assets/vfmtok-flowchart.png" width=95%>
 <p>
 
-VFMTok is the first to experimentally demonstrate that features from existing vision foundation models (such as DINOv2, SigLIP, SigLIP2, etc.) can be leveraged to reconstruct the original image.
-
 This is a PyTorch/GPU implementation of the paper **Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation**, dubbed as **VFMTok**, which achieve state-of-the-art (SOTA) performance (gFID: 1.33, gIS: 317.4) on the task of class-to-image generation on the ImageNet based on [RAR](https://yucornetto.github.io/projects/rar.html). **VFMTok is the first** to experimentally demonstrate that features from existing vision foundation models (such as DINOv2, SigLIP, SigLIP2, etc.) can be directly leveraged to reconstruct the original image. To achieve this, VFMTok innovatively designed two key components: (1) a **region-adaptive quantization** framework that reduces redundancy in the pre-trained features on regular 2D grids, and (2) a semantic reconstruction objective that aligns the tokenizer’s outputs with the foundation model’s representations to preserve semantic fidelity. Once the trained VFMTok is integrated into the autoregressive (AR) generative models, it achieves notable results on the class-to-image generation task, while accelerating convergence by a factor of three. Besides, it also enables high-fidelity class-conditional synthesis **without the requirement of a CFG (classifier-free guidance)**.
 
 This repo contains:
