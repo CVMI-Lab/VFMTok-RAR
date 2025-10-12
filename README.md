@@ -1,5 +1,4 @@
-<!-- # VFMTok-RAR
-(NeurIPS 2025, SOTA) Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Image Generation -->
+
 # Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation <br><sub>SOTA performance</sub>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2507.08441-b31b1b.svg)](https://arxiv.org/pdf/2507.08441)&nbsp;
@@ -10,7 +9,6 @@
 <img src="assets/vfmtok-flowchart.png" width=95%>
 <p>
 
-<!-- This is a PyTorch/GPU implementation of the paper **Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation**, dubbed as **VFMTok**, which achieve state-of-the-art (SOTA) performance (gFID: 1.33, gIS: 317.4) for the task of class-to-image generation based on [RAR](https://yucornetto.github.io/projects/rar.html). **VFMTok is the first** to experimentally demonstrate that features from existing vision foundation models (such as DINOv2, SigLIP, SigLIP2, etc.) can be directly leveraged to reconstruct the original image. To achieve this, VFMTok innovatively designed two key components: (1) a **region-adaptive quantization** framework that reduces redundancy in the pre-trained features on regular 2D grids, and (2) a semantic reconstruction objective that aligns the tokenizer’s outputs with the foundation model’s representations to preserve semantic fidelity. Once the trained VFMTok is integrated into the autoregressive (AR) generative models, it achieves notable results on the class-to-image generation task, while accelerating convergence by a factor of three. Besides, it also enables high-fidelity class-conditional synthesis **without the requirement of a CFG (classifier-free guidance)**. -->
 
 This is a PyTorch/GPU implementation of the paper **"Vision Foundation Models as Effective Visual Tokenizers for Autoregressive Generation"**, referred to as VFMTok, which establishes **new state-of-the-art performance (gFID: 1.33, gIS: 317.4)** for class-to-image generation based on the [RAR](https://yucornetto.github.io/projects/rar.html) framework.
 
@@ -82,7 +80,7 @@ Method | tokens | rFID (256x256) | rIS (256x256)    | weight
 VFMTok |  256   | 0.98 | 216.2   | [vfmtok-tokenizer.pt](https://huggingface.co/yexiguafu/VFMTok/blob/main/DINOv2/tokenizer/vfmtok-tokenizer.pt)
 
 ### 2. AR generation models with classifier-free guidance (CFG).
-Once the trained VFMTok(DINOv2) is integrated into autoregressive (AR) generative model -- [RAR](https://yucornetto.github.io/projects/rar.html), it ahieves notable image generation performance.
+Once the trained VFMTok(DINOv2) is integrated into autoregressive (AR) generative model -- [RAR](https://yucornetto.github.io/projects/rar.html), it ahieves new **state-of-the-art** image generation performance.
 
 Method   | params | epochs | FID | sFID |  IS  | Pre. | Rec. |
 ---      | :---:  | :---:  | :---:| :---: |:---: | :---:|:---:|
