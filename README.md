@@ -94,7 +94,7 @@ The trained VFMTok(DINOv2), when integrated into the AR generation models, can a
 
 Method   | params | epochs | FID | sFID |  IS  | Pre. | Rec. |
 ---      | :---:  | :---:  | :---:| :---: |:---: | :---:|:---:|
-[VFMTok-L-ultra](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L-ultra/model.safetensors) |  318M  |  400   | 2.01 | 5.34 | 211.1 | 0.78 | 0.63 |
+[VFMTok-L-ultra](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L-ultra/model.safetensors) |  461M  |  400   | 2.01 | 5.34 | 211.1 | 0.78 | 0.63 |
 [RAR-L-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-l.safetensors)|  461M  |  400  | 2.02 | 5.51 | 210.4 | 0.79 | 0.63 |
 [RAR-XL-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-xl.safetensors)|  955M  |  400  | 1.74 | 5.33 | 233.0 | 0.80 | 0.63 |
 [RAR-XXL-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-xxl.safetensors)|  1.5B  |  400  | 1.65 | 5.55 | 253.7 | 0.80 | 0.63 |
