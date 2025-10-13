@@ -18,7 +18,7 @@ When integrated into the AR generative models, the trained VFMTok achieves remar
 
 This repo contains:
 
-* 🪐 A simple PyTorch implementation of VFMTok and various RAR generative models.
+* 🪐 A simple PyTorch implementation of VFMTok and various new **state-of-the-art* generative models.
 * ⚡️ Pre-trained tokenizer: VFMTok and AR generative models trained on ImageNet.
 * 🛸 Training and evaluation scripts for tokenizer and generative models, which were also provided in [here](./scripts).
 * 🎉 Hugging Face for easy access to pre-trained models.
@@ -80,19 +80,24 @@ Method | tokens | rFID (256x256) | rIS (256x256)    | weight
 VFMTok |  256   | 0.98 | 216.2   | [vfmtok-tokenizer.pt](https://huggingface.co/yexiguafu/VFMTok/blob/main/DINOv2/tokenizer/vfmtok-tokenizer.pt)
 
 ### 2. AR generation models with classifier-free guidance (CFG).
-Once the trained VFMTok(DINOv2) is integrated into autoregressive (AR) generative model -- [RAR](https://yucornetto.github.io/projects/rar.html), it ahieves new **state-of-the-art** image generation performance.
+Once the trained VFMTok(DINOv2) is integrated into autoregressive (AR) generative model -- [RAR](https://yucornetto.github.io/projects/rar.html), it ahieves new **state-of-the-art** image generation performance. Here we provide 2 types of AR generative models: ultra and vanilla. The [ultra](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L-ultra/model.safetensors) AR generative model achieves a new state-of-the-art image synthesis performance, while the vanilla ones also produce significant generation performance.
 
 Method   | params | epochs | FID | sFID |  IS  | Pre. | Rec. |
 ---      | :---:  | :---:  | :---:| :---: |:---: | :---:|:---:|
-[RAR-L](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L/model.safetensors) |  461M  |  400   | 1.33 | 5.72 | 317.4 | 0.78 | 0.65 |
+[RAR-L-ultra](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L-ultra/model.safetensors) |  461M  |  400   | **1.33** | 5.72 | **317.4** | 0.78 | 0.65 |
+[RAR-L-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-l.safetensors)|  461M  |  400  | 1.44 | 6.03 | 312.8 | 0.78 | 0.66 |
+[RAR-XL-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-xl.safetensors)|  955M  |  400  | 1.38 | 5.86 | 310.2 | 0.78 | 0.65 |
+[RAR-XXL-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-xxl.safetensors)|  1.5B  |  400  | 1.36 | 5.86 | 301.3 | 0.78 | 0.66 |
 
 ### 3. AR generation without CFG (CFG-free image generation).
 The trained VFMTok(DINOv2), when integrated into the AR generation models, can also achieve impressive image generation quality without CFG-guidance (CFG-free guidance).
 
 Method   | params | epochs | FID | sFID |  IS  | Pre. | Rec. |
 ---      | :---:  | :---:  | :---:| :---: |:---: | :---:|:---:|
-[VFMTok-L](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L/model.safetensors) |  461M  |  400   | 2.01 | 5.34 | 211.1 | 0.78 | 0.63 |
-
+[VFMTok-L-ultra](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L-ultra/model.safetensors) |  318M  |  400   | 2.01 | 5.34 | 211.1 | 0.78 | 0.63 |
+[RAR-L-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-l.safetensors)|  461M  |  400  | 2.02 | 5.51 | 210.4 | 0.79 | 0.63 |
+[RAR-XL-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-xl.safetensors)|  955M  |  400  | 1.74 | 5.33 | 233.0 | 0.80 | 0.63 |
+[RAR-XXL-vanilla](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-vanilla/vfmtok-rar-xxl.safetensors)|  1.5B  |  400  | 1.65 | 5.55 | 253.7 | 0.80 | 0.63 |
 
 ## Training
 
