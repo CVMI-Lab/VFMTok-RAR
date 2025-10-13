@@ -19,7 +19,7 @@ model:
         codebook_slots_embed_dim: 12
         token_size: 256
         num_latent_tokens: 256
-        pretrained_tokenizer_weight: "pretrained_models/vit_vqgan_step_250000.pt"
+        pretrained_tokenizer_weight: "tokenizer/vfmtok-tokenizer.pt"
         finetune_decoder: False
 
     generator:
