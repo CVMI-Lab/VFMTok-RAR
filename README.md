@@ -26,7 +26,7 @@ This repo contains:
 
 ## Release
 
-- [2024/07/11] 🔥 **VFMTok** has been released. Checkout the [paper](https://arxiv.org/pdf/2507.08441) for details.🔥
+- [2025/07/11] 🔥 **VFMTok** has been released. Checkout the [paper](https://arxiv.org/pdf/2507.08441) for details.🔥
 - [2025/09/18] 🔥 **VFMTok has been accepted by NeurIPS 2025!** 🔥
 - [2025/10/11] 🔥 [Image tokenizers](https://huggingface.co/yexiguafu/VFMTok/tree/main/DINOv2/tokenizer) and [AR models](https://huggingface.co/yexiguafu/VFMTok/tree/main/DINOv2) for class-conditional image generation are released. 🔥
 - [2025/10/11] 🔥 All codes of VFMTok have been released. 🔥
