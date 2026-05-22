@@ -42,26 +42,19 @@ This repo contains:
 
 If you are not using Linux, do *NOT* proceed.
 
-1. Clone this repository and navigate to Hita folder
+1. Clone this repository and navigate to VFMTok-RAR folder
 ```bash
-git clone https://github.com/CVMI-Lab/VFMTok.git
-cd VFMTok
+git clone https://github.com/CVMI-Lab/VFMTok-RAR.git
+cd VFMTok-RAR
 ```
 
-2. Install Package
+2. Create the vfmtok environment
 ```Shell
 conda create -n vfmtok python=3.10 -y
 conda activate vfmtok
-pip install --upgrade pip  # enable PEP 660 support
-pip install -e .
 ```
 
-3. Install additional packages for training cases as required.
-```
-pip install -e ".[train]"
-pip install flash-attn --no-build-isolation
-```
-4. Install deformable attention module
+3. Install deformable attention module
 ```
 cd vfmtok/modules/ops
 bash make.sh
@@ -77,7 +70,7 @@ In this repo, we release one image tokenizer: VFMTok(DINOv2). It directly utiliz
 
 Method | tokens | rFID (256x256) | rIS (256x256)    | weight
 ---    | :---:  |:---:|:---:   | :---: 
-VFMTok |  256   | 0.98 | 216.2   | [vfmtok-tokenizer.pt](https://huggingface.co/yexiguafu/VFMTok/blob/main/DINOv2/tokenizer/vfmtok-tokenizer.pt)
+VFMTok |  256   | 0.89 | 216.2   | [vfmtok-tokenizer.pt](https://huggingface.co/yexiguafu/VFMTok/blob/main/DINOv2/tokenizer/vfmtok-tokenizer.pt)
 
 ### 2. AR generation models with classifier-free guidance (CFG).
 Once the trained VFMTok(DINOv2) is integrated into autoregressive (AR) generative model -- [RAR](https://yucornetto.github.io/projects/rar.html), it ahieves new **state-of-the-art** image generation performance. Here we provide 2 types of AR generative models: ultra and vanilla. The [ultra](https://huggingface.co/yexiguafu/VFMTok/blob/main/VFMTok-RAR/RAR-L-ultra/model.safetensors) AR generative model achieves a new state-of-the-art image synthesis performance, while the vanilla ones also produce significant generation performance.
